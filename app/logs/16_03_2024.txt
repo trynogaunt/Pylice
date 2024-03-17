@@ -1,0 +1,525 @@
+03:14:05 [INFO]: Test extension is loaded
+03:14:07 [INFO]: Logged as Emily
+03:14:07 [INFO]: Synced commands: 1
+03:54:29 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: parameter 'admin_channel' is missing a type annotation in callback 'Setup.setup'
+03:54:29 [INFO]: Test extension is loaded
+03:54:31 [INFO]: Logged as Emily
+03:54:31 [INFO]: Synced commands: 1
+03:55:16 [INFO]: Setup extension is loaded
+03:55:16 [INFO]: Test extension is loaded
+03:55:18 [INFO]: Logged as Emily
+03:55:19 [INFO]: Synced commands: 2
+04:17:53 [INFO]: Setup extension is loaded
+04:17:53 [INFO]: Test extension is loaded
+04:17:55 [INFO]: Logged as Emily
+04:17:56 [INFO]: Synced commands: 2
+04:19:51 [INFO]: Setup extension is loaded
+04:19:51 [INFO]: Test extension is loaded
+04:19:53 [INFO]: Logged as Emily
+04:19:53 [INFO]: Synced commands: 0
+04:21:00 [INFO]: Setup extension is loaded
+04:21:00 [INFO]: Test extension is loaded
+04:21:02 [INFO]: Logged as Emily
+04:21:02 [INFO]: Synced commands: 0
+04:23:53 [INFO]: Setup extension is loaded
+04:23:53 [INFO]: Test extension is loaded
+04:23:56 [INFO]: Logged as Emily
+04:23:56 [INFO]: Synced commands: 0
+04:25:00 [INFO]: Setup extension is loaded
+04:25:00 [INFO]: Test extension is loaded
+04:25:02 [INFO]: Logged as Emily
+04:25:02 [INFO]: Synced commands: 0
+04:25:25 [INFO]: Setup extension is loaded
+04:25:25 [INFO]: Test extension is loaded
+04:25:28 [INFO]: Logged as Emily
+04:25:49 [INFO]: Setup extension is loaded
+04:25:49 [INFO]: Test extension is loaded
+04:25:52 [INFO]: Logged as Emily
+04:26:19 [INFO]: Setup extension is loaded
+04:26:19 [INFO]: Test extension is loaded
+04:26:21 [INFO]: Logged as Emily
+04:27:00 [INFO]: Setup extension is loaded
+04:27:00 [INFO]: Test extension is loaded
+04:27:02 [INFO]: Logged as Emily
+04:27:03 [INFO]: Synced commands: 0
+04:27:19 [INFO]: Setup extension is loaded
+04:27:19 [INFO]: Test extension is loaded
+04:27:21 [INFO]: Logged as Emily
+04:27:29 [INFO]: Setup extension is loaded
+04:27:29 [INFO]: Test extension is loaded
+04:27:31 [INFO]: Logged as Emily
+04:28:10 [INFO]: Setup extension is loaded
+04:28:10 [INFO]: Test extension is loaded
+04:28:13 [INFO]: Logged as Emily
+04:29:03 [INFO]: Synced commands: 0
+04:41:07 [INFO]: Setup extension is loaded
+04:41:07 [INFO]: Test extension is loaded
+04:41:10 [INFO]: Logged as Emily
+04:41:10 [INFO]: Synced commands: 0
+05:01:25 [INFO]: Setup extension is loaded
+05:01:25 [INFO]: Test extension is loaded
+05:01:28 [INFO]: Logged as Pylice
+05:01:28 [INFO]: Synced commands: 0
+05:01:39 [INFO]: Setup extension is loaded
+05:01:39 [INFO]: Test extension is loaded
+05:02:16 [INFO]: Setup extension is loaded
+05:02:16 [INFO]: Test extension is loaded
+05:02:19 [INFO]: Logged as Pylice
+05:02:19 [INFO]: Synced commands: 0
+05:03:38 [INFO]: Setup extension is loaded
+05:03:38 [INFO]: Test extension is loaded
+05:05:05 [INFO]: Setup extension is loaded
+05:05:05 [INFO]: Test extension is loaded
+05:06:16 [INFO]: Setup extension is loaded
+05:06:16 [INFO]: Test extension is loaded
+05:06:18 [INFO]: Logged as Pylice
+05:06:18 [INFO]: Synced commands: 0
+05:14:30 [INFO]: Setup extension is loaded
+05:14:30 [INFO]: Test extension is loaded
+05:14:33 [INFO]: Logged as Pylice
+05:14:33 [INFO]: Synced commands: 0
+05:20:25 [INFO]: Setup extension is loaded
+05:20:25 [INFO]: Test extension is loaded
+05:20:28 [INFO]: Logged as Pylice
+05:20:28 [INFO]: Synced commands: 0
+05:23:36 [INFO]: Setup extension is loaded
+05:23:36 [INFO]: Test extension is loaded
+05:23:38 [INFO]: Logged as Pylice
+05:23:38 [INFO]: Synced commands: 0
+05:24:31 [INFO]: Setup extension is loaded
+05:24:31 [INFO]: Test extension is loaded
+05:24:34 [INFO]: Logged as Pylice
+05:24:34 [INFO]: Synced commands: 0
+05:26:20 [INFO]: Setup extension is loaded
+05:26:20 [INFO]: Test extension is loaded
+05:26:23 [INFO]: Logged as Pylice
+05:26:23 [INFO]: Synced commands: 0
+05:29:16 [INFO]: Setup extension is loaded
+05:29:16 [INFO]: Test extension is loaded
+05:29:18 [INFO]: Logged as Pylice
+05:29:18 [INFO]: Synced commands: 0
+05:31:46 [INFO]: Setup extension is loaded
+05:31:46 [INFO]: Test extension is loaded
+05:31:49 [INFO]: Logged as Pylice
+05:31:49 [INFO]: Synced commands: 0
+05:32:26 [INFO]: Setup extension is loaded
+05:32:26 [INFO]: Test extension is loaded
+05:32:29 [INFO]: Logged as Pylice
+05:32:29 [INFO]: Synced commands: 1
+05:37:22 [INFO]: Setup extension is loaded
+05:37:22 [INFO]: Test extension is loaded
+05:37:25 [INFO]: Logged as Pylice
+05:37:25 [INFO]: Synced commands: 1
+05:38:51 [INFO]: Setup extension is loaded
+05:38:51 [INFO]: Test extension is loaded
+05:38:53 [INFO]: Logged as Pylice
+05:38:54 [INFO]: Synced commands: 1
+05:43:22 [INFO]: Setup extension is loaded
+05:43:22 [INFO]: Test extension is loaded
+05:43:24 [INFO]: Logged as Pylice
+05:43:24 [INFO]: Synced commands: 1
+05:43:57 [INFO]: Setup extension is loaded
+05:43:57 [INFO]: Test extension is loaded
+05:43:59 [INFO]: Logged as Pylice
+05:44:00 [INFO]: Synced commands: 2
+05:51:54 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: AttributeError: module 'discord.ext.commands' has no attribute 'tree'
+05:51:54 [INFO]: Test extension is loaded
+05:51:56 [INFO]: Logged as Pylice
+05:51:56 [INFO]: Synced commands: 1
+05:52:30 [INFO]: Setup extension is loaded
+05:52:30 [INFO]: Test extension is loaded
+05:52:32 [INFO]: Logged as Pylice
+05:52:33 [INFO]: Synced commands: 2
+05:52:49 [INFO]: Setup extension is loaded
+05:52:49 [INFO]: Test extension is loaded
+05:52:52 [INFO]: Logged as Pylice
+05:53:26 [INFO]: Setup extension is loaded
+05:53:26 [INFO]: Test extension is loaded
+05:53:29 [INFO]: Logged as Pylice
+05:54:03 [INFO]: Synced commands: 1
+06:03:16 [INFO]: Setup extension is loaded
+06:03:16 [INFO]: Test extension is loaded
+06:03:18 [INFO]: Logged as Pylice
+06:03:19 [INFO]: Synced commands: 0
+06:03:46 [INFO]: Setup extension is loaded
+06:03:46 [INFO]: Test extension is loaded
+06:03:48 [INFO]: Logged as Pylice
+06:04:19 [INFO]: Synced commands: 0
+06:04:34 [INFO]: Setup extension is loaded
+06:04:34 [INFO]: Test extension is loaded
+06:04:36 [INFO]: Logged as Pylice
+06:04:36 [INFO]: Synced commands: 0
+06:06:38 [INFO]: Setup extension is loaded
+06:06:38 [INFO]: Test extension is loaded
+06:06:40 [INFO]: Logged as Pylice
+06:06:40 [INFO]: Synced commands: 0
+06:07:23 [INFO]: Setup extension is loaded
+06:07:23 [INFO]: Test extension is loaded
+06:07:25 [INFO]: Logged as Pylice
+06:07:25 [INFO]: Synced commands: 0
+06:07:36 [INFO]: Setup extension is loaded
+06:07:36 [INFO]: Test extension is loaded
+06:07:38 [INFO]: Logged as Pylice
+06:08:25 [INFO]: Synced commands: 0
+06:09:06 [INFO]: Setup extension is loaded
+06:09:06 [INFO]: Test extension is loaded
+06:09:08 [INFO]: Logged as Pylice
+06:09:08 [INFO]: Synced commands: 0
+06:10:15 [INFO]: Setup extension is loaded
+06:10:15 [INFO]: Test extension is loaded
+06:10:18 [INFO]: Logged as Pylice
+06:10:18 [INFO]: Synced commands: 0
+06:10:52 [INFO]: Setup extension is loaded
+06:10:52 [INFO]: Test extension is loaded
+06:10:54 [INFO]: Logged as Pylice
+06:10:54 [INFO]: Synced commands: 0
+06:11:13 [INFO]: Setup extension is loaded
+06:11:13 [INFO]: Test extension is loaded
+06:11:16 [INFO]: Logged as Pylice
+06:11:54 [INFO]: Synced commands: 0
+06:22:49 [ERROR]: Setup extension can't be loaded -> 'Bot' object has no attribute 'load_extension'
+06:22:49 [ERROR]: Test extension can't be loaded -> 'Bot' object has no attribute 'load_extension'
+06:22:51 [INFO]: Logged as Pylice
+06:24:39 [ERROR]: Setup extension can't be loaded -> 'Bot' object has no attribute 'load_extension'
+06:24:39 [ERROR]: Test extension can't be loaded -> 'Bot' object has no attribute 'load_extension'
+06:24:41 [INFO]: Logged as Pylice
+06:24:42 [INFO]: Synced commands: 0
+06:29:31 [INFO]: Setup extension is loaded
+06:29:31 [INFO]: Test extension is loaded
+06:29:34 [INFO]: Logged as Pylice
+06:29:34 [INFO]: Synced commands: 0
+06:30:00 [INFO]: Setup extension is loaded
+06:30:00 [INFO]: Test extension is loaded
+06:30:02 [INFO]: Logged as Pylice
+06:30:34 [INFO]: Synced commands: 0
+06:37:16 [INFO]: Setup extension is loaded
+06:37:16 [INFO]: Test extension is loaded
+06:37:19 [INFO]: Logged as Pylice
+06:37:19 [INFO]: Synced commands: 0
+06:38:59 [INFO]: Setup extension is loaded
+06:38:59 [INFO]: Test extension is loaded
+06:39:02 [INFO]: Logged as Pylice
+06:39:02 [INFO]: Synced commands: 0
+06:40:26 [INFO]: Setup extension is loaded
+06:40:26 [INFO]: Test extension is loaded
+06:40:28 [INFO]: Logged as Pylice
+06:40:28 [INFO]: Synced commands: 0
+06:41:33 [INFO]: Setup extension is loaded
+06:41:33 [INFO]: Test extension is loaded
+06:41:35 [INFO]: Logged as Pylice
+06:41:36 [INFO]: Synced commands: 0
+06:41:49 [INFO]: Setup extension is loaded
+06:41:49 [INFO]: Test extension is loaded
+06:41:52 [INFO]: Logged as Pylice
+06:42:36 [INFO]: Synced commands: 0
+06:42:48 [INFO]: Setup extension is loaded
+06:42:48 [INFO]: Test extension is loaded
+06:42:50 [INFO]: Logged as Pylice
+06:42:50 [INFO]: Synced commands: 0
+06:44:59 [INFO]: Setup extension is loaded
+06:44:59 [INFO]: Test extension is loaded
+06:45:01 [INFO]: Logged as Pylice
+06:45:01 [INFO]: Synced commands: 0
+06:46:22 [INFO]: Setup extension is loaded
+06:46:22 [INFO]: Test extension is loaded
+06:46:24 [INFO]: Logged as Pylice
+06:46:25 [INFO]: Synced commands: 0
+06:46:42 [INFO]: Setup extension is loaded
+06:46:42 [INFO]: Test extension is loaded
+06:46:44 [INFO]: Logged as Pylice
+06:47:25 [INFO]: Synced commands: 0
+06:49:15 [INFO]: Setup extension is loaded
+06:49:15 [ERROR]: Test extension can't be loaded -> Extension 'cogs.Test' raised an error: NameError: name 'bot' is not defined
+06:49:18 [INFO]: Logged as Pylice
+06:49:18 [INFO]: Synced commands: 0
+06:49:27 [INFO]: Setup extension is loaded
+06:49:27 [ERROR]: Test extension can't be loaded -> Extension 'cogs.Test' raised an error: NameError: name 'self' is not defined
+06:49:29 [INFO]: Logged as Pylice
+06:50:18 [INFO]: Synced commands: 0
+07:02:45 [INFO]: Setup extension is loaded
+07:02:45 [INFO]: Test extension is loaded
+07:02:47 [INFO]: Logged as Pylice
+07:02:48 [INFO]: Synced commands: 1
+07:04:29 [INFO]: Setup extension is loaded
+07:04:29 [INFO]: Test extension is loaded
+07:04:31 [INFO]: Logged as Pylice
+07:04:32 [INFO]: Synced commands: 0
+07:37:54 [INFO]: Setup extension is loaded
+07:37:54 [INFO]: Test extension is loaded
+07:37:57 [INFO]: Logged as Pylice
+07:37:57 [INFO]: Synced commands: 1
+07:38:45 [INFO]: Setup extension is loaded
+07:38:45 [INFO]: Test extension is loaded
+07:38:48 [INFO]: Logged as Pylice
+07:38:48 [INFO]: Synced commands: 1
+07:40:33 [INFO]: Setup extension is loaded
+07:40:33 [INFO]: Test extension is loaded
+07:40:35 [INFO]: Logged as Pylice
+07:40:35 [INFO]: Synced commands: 2
+07:41:30 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: parameter 'admin_channel' is missing a type annotation in callback 'Setup.setup'
+07:41:30 [INFO]: Test extension is loaded
+07:41:32 [INFO]: Logged as Pylice
+07:41:33 [INFO]: Synced commands: 1
+07:42:10 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: parameter 'admin_channel' is missing a type annotation in callback 'Setup.setup'
+07:42:10 [INFO]: Test extension is loaded
+07:42:12 [INFO]: Logged as Pylice
+07:42:12 [INFO]: Synced commands: 1
+07:42:28 [INFO]: Setup extension is loaded
+07:42:28 [INFO]: Test extension is loaded
+07:42:31 [INFO]: Logged as Pylice
+07:43:12 [INFO]: Synced commands: 2
+07:45:11 [INFO]: Setup extension is loaded
+07:45:11 [INFO]: Test extension is loaded
+07:45:14 [INFO]: Logged as Pylice
+07:45:14 [INFO]: Synced commands: 2
+07:46:36 [INFO]: Setup extension is loaded
+07:46:36 [INFO]: Test extension is loaded
+07:46:39 [INFO]: Logged as Pylice
+07:46:39 [INFO]: Synced commands: 2
+07:59:49 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: ChannelSelect.__init__() got an unexpected keyword argument 'label'
+07:59:49 [INFO]: Test extension is loaded
+07:59:51 [INFO]: Logged as Pylice
+07:59:52 [INFO]: Synced commands: 1
+08:01:37 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: ChannelSelect.__init__() got an unexpected keyword argument 'label'
+08:01:37 [INFO]: Test extension is loaded
+08:01:39 [INFO]: Logged as Pylice
+08:01:39 [INFO]: Synced commands: 1
+08:01:55 [INFO]: Setup extension is loaded
+08:01:55 [INFO]: Test extension is loaded
+08:01:57 [INFO]: Logged as Pylice
+08:02:39 [INFO]: Synced commands: 2
+08:03:14 [INFO]: Setup extension is loaded
+08:03:14 [INFO]: Test extension is loaded
+08:03:16 [INFO]: Logged as Pylice
+08:03:16 [INFO]: Synced commands: 2
+08:05:29 [INFO]: Setup extension is loaded
+08:05:29 [INFO]: Test extension is loaded
+08:05:31 [INFO]: Logged as Pylice
+08:05:32 [INFO]: Synced commands: 2
+08:11:07 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: expected custom_id to be str not int
+08:11:07 [INFO]: Test extension is loaded
+08:11:09 [INFO]: Logged as Pylice
+08:11:09 [INFO]: Synced commands: 1
+08:11:25 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: expected custom_id to be str not int
+08:11:25 [INFO]: Test extension is loaded
+08:11:28 [INFO]: Logged as Pylice
+08:11:38 [INFO]: Setup extension is loaded
+08:11:38 [INFO]: Test extension is loaded
+08:11:40 [INFO]: Logged as Pylice
+08:12:40 [INFO]: Setup extension is loaded
+08:12:40 [INFO]: Test extension is loaded
+08:12:43 [INFO]: Logged as Pylice
+08:12:43 [INFO]: Synced commands: 2
+08:15:28 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: TypeError: View.__init_subclass__() got an unexpected keyword argument 'title'
+08:15:28 [INFO]: Test extension is loaded
+08:15:30 [INFO]: Logged as Pylice
+08:15:31 [INFO]: Synced commands: 1
+08:15:53 [INFO]: Setup extension is loaded
+08:15:53 [INFO]: Test extension is loaded
+08:15:55 [INFO]: Logged as Pylice
+08:16:31 [INFO]: Synced commands: 2
+08:19:03 [INFO]: Setup extension is loaded
+08:19:03 [INFO]: Test extension is loaded
+08:19:06 [INFO]: Logged as Pylice
+08:19:06 [INFO]: Synced commands: 2
+08:21:21 [INFO]: Setup extension is loaded
+08:21:21 [INFO]: Test extension is loaded
+08:21:23 [INFO]: Logged as Pylice
+08:21:24 [INFO]: Synced commands: 2
+08:21:49 [INFO]: Setup extension is loaded
+08:21:49 [INFO]: Test extension is loaded
+08:21:52 [INFO]: Logged as Pylice
+08:22:24 [INFO]: Synced commands: 2
+08:22:41 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: SyntaxError: invalid syntax. Perhaps you forgot a comma? (Setup.py, line 12)
+08:22:41 [INFO]: Test extension is loaded
+08:22:43 [INFO]: Logged as Pylice
+08:22:44 [INFO]: Synced commands: 1
+08:23:19 [INFO]: Setup extension is loaded
+08:23:19 [INFO]: Test extension is loaded
+08:23:22 [INFO]: Logged as Pylice
+08:23:22 [INFO]: Synced commands: 2
+08:24:41 [INFO]: Setup extension is loaded
+08:24:41 [INFO]: Test extension is loaded
+08:24:43 [INFO]: Logged as Pylice
+08:24:44 [INFO]: Synced commands: 2
+08:25:03 [INFO]: Setup extension is loaded
+08:25:03 [INFO]: Test extension is loaded
+08:25:05 [INFO]: Logged as Pylice
+08:25:44 [INFO]: Synced commands: 2
+08:31:52 [INFO]: Setup extension is loaded
+08:31:52 [INFO]: Test extension is loaded
+08:31:55 [INFO]: Logged as Pylice
+08:31:55 [INFO]: Synced commands: 2
+08:34:23 [INFO]: Setup extension is loaded
+08:34:23 [INFO]: Test extension is loaded
+08:34:26 [INFO]: Logged as Pylice
+08:34:26 [INFO]: Synced commands: 2
+08:35:46 [INFO]: Setup extension is loaded
+08:35:46 [INFO]: Test extension is loaded
+08:35:48 [INFO]: Logged as Pylice
+08:35:49 [INFO]: Synced commands: 2
+08:36:38 [INFO]: Setup extension is loaded
+08:36:38 [INFO]: Test extension is loaded
+08:36:40 [INFO]: Logged as Pylice
+08:36:40 [INFO]: Synced commands: 2
+08:51:12 [INFO]: Setup extension is loaded
+08:51:12 [INFO]: Test extension is loaded
+08:51:15 [INFO]: Logged as Pylice
+08:51:15 [INFO]: Synced commands: 2
+08:53:50 [INFO]: Setup extension is loaded
+08:53:50 [INFO]: Test extension is loaded
+08:53:52 [INFO]: Logged as Pylice
+08:53:52 [INFO]: Synced commands: 2
+08:54:11 [INFO]: Setup extension is loaded
+08:54:11 [INFO]: Test extension is loaded
+08:54:13 [INFO]: Logged as Pylice
+08:54:52 [INFO]: Synced commands: 2
+08:59:52 [INFO]: Setup extension is loaded
+08:59:52 [INFO]: Test extension is loaded
+08:59:54 [INFO]: Logged as Pylice
+08:59:55 [INFO]: Synced commands: 2
+09:01:57 [ERROR]: Setup extension can't be loaded -> Extension 'cogs.Setup' raised an error: SyntaxError: invalid syntax (Setup.py, line 11)
+09:01:57 [INFO]: Test extension is loaded
+09:02:00 [INFO]: Logged as Pylice
+09:02:00 [INFO]: Synced commands: 1
+09:02:07 [INFO]: Setup extension is loaded
+09:02:07 [INFO]: Test extension is loaded
+09:02:09 [INFO]: Logged as Pylice
+09:03:00 [INFO]: Synced commands: 2
+09:03:44 [INFO]: Setup extension is loaded
+09:03:44 [INFO]: Test extension is loaded
+09:03:46 [INFO]: Logged as Pylice
+09:03:46 [INFO]: Synced commands: 2
+09:04:36 [INFO]: Setup extension is loaded
+09:04:36 [INFO]: Test extension is loaded
+09:04:39 [INFO]: Logged as Pylice
+09:04:39 [INFO]: Synced commands: 2
+09:05:54 [INFO]: Setup extension is loaded
+09:05:54 [INFO]: Test extension is loaded
+09:05:57 [INFO]: Logged as Pylice
+09:05:57 [INFO]: Synced commands: 2
+09:07:59 [INFO]: Setup extension is loaded
+09:07:59 [INFO]: Test extension is loaded
+09:08:02 [INFO]: Logged as Pylice
+09:08:02 [INFO]: Synced commands: 2
+09:08:45 [INFO]: Setup extension is loaded
+09:08:45 [INFO]: Test extension is loaded
+09:08:48 [INFO]: Logged as Pylice
+09:08:48 [INFO]: Synced commands: 2
+09:10:32 [INFO]: Setup extension is loaded
+09:10:32 [INFO]: Test extension is loaded
+09:10:34 [INFO]: Logged as Pylice
+09:10:34 [INFO]: Synced commands: 2
+09:11:26 [INFO]: Setup extension is loaded
+09:11:26 [INFO]: Test extension is loaded
+09:11:29 [INFO]: Logged as Pylice
+09:11:29 [INFO]: Synced commands: 2
+09:12:07 [INFO]: Setup extension is loaded
+09:12:07 [INFO]: Test extension is loaded
+09:12:10 [INFO]: Logged as Pylice
+09:12:10 [INFO]: Synced commands: 2
+09:12:58 [INFO]: Setup extension is loaded
+09:12:58 [INFO]: Test extension is loaded
+09:13:00 [INFO]: Logged as Pylice
+09:13:00 [INFO]: Synced commands: 2
+09:14:45 [INFO]: Setup extension is loaded
+09:14:45 [INFO]: Test extension is loaded
+09:14:47 [INFO]: Logged as Pylice
+09:14:47 [INFO]: Synced commands: 2
+09:26:35 [INFO]: Setup extension is loaded
+09:26:35 [INFO]: Test extension is loaded
+09:26:38 [INFO]: Logged as Pylice
+09:26:38 [INFO]: Synced commands: 2
+09:32:37 [INFO]: Setup extension is loaded
+09:32:37 [INFO]: Test extension is loaded
+09:32:39 [INFO]: Logged as Pylice
+09:32:39 [INFO]: Synced commands: 2
+09:35:02 [INFO]: Setup extension is loaded
+09:35:02 [INFO]: Test extension is loaded
+09:35:05 [INFO]: Logged as Pylice
+09:35:05 [INFO]: Synced commands: 2
+09:40:04 [INFO]: Setup extension is loaded
+09:40:04 [INFO]: Test extension is loaded
+09:40:06 [INFO]: Logged as Pylice
+09:40:06 [INFO]: Synced commands: 2
+09:42:33 [INFO]: Setup extension is loaded
+09:42:33 [INFO]: Test extension is loaded
+09:42:35 [INFO]: Logged as Pylice
+09:42:35 [INFO]: Synced commands: 2
+09:43:19 [INFO]: Setup extension is loaded
+09:43:19 [INFO]: Test extension is loaded
+09:43:22 [INFO]: Logged as Pylice
+09:43:22 [INFO]: Synced commands: 2
+09:45:21 [INFO]: Setup extension is loaded
+09:45:21 [INFO]: Test extension is loaded
+09:45:23 [INFO]: Logged as Pylice
+09:45:24 [INFO]: Synced commands: 2
+09:46:21 [INFO]: Setup extension is loaded
+09:46:21 [INFO]: Test extension is loaded
+09:46:23 [INFO]: Logged as Pylice
+09:46:23 [INFO]: Synced commands: 2
+09:47:55 [INFO]: Setup extension is loaded
+09:47:55 [INFO]: Test extension is loaded
+09:47:57 [INFO]: Logged as Pylice
+09:47:57 [INFO]: Synced commands: 2
+09:48:04 [INFO]: Setup extension is loaded
+09:48:04 [INFO]: Test extension is loaded
+09:48:06 [INFO]: Logged as Pylice
+09:48:26 [INFO]: Setup extension is loaded
+09:48:26 [INFO]: Test extension is loaded
+09:48:28 [INFO]: Logged as Pylice
+09:49:09 [INFO]: Setup extension is loaded
+09:49:09 [INFO]: Test extension is loaded
+09:49:12 [INFO]: Logged as Pylice
+09:49:59 [INFO]: Setup extension is loaded
+09:49:59 [INFO]: Test extension is loaded
+09:50:02 [INFO]: Logged as Pylice
+09:50:02 [INFO]: Synced commands: 2
+09:50:49 [INFO]: Setup extension is loaded
+09:50:49 [INFO]: Test extension is loaded
+09:50:51 [INFO]: Logged as Pylice
+09:50:52 [INFO]: Synced commands: 2
+09:51:16 [INFO]: Setup extension is loaded
+09:51:16 [INFO]: Test extension is loaded
+09:51:19 [INFO]: Logged as Pylice
+09:51:40 [INFO]: Setup extension is loaded
+09:51:40 [INFO]: Test extension is loaded
+09:51:42 [INFO]: Logged as Pylice
+09:52:03 [INFO]: Setup extension is loaded
+09:52:03 [INFO]: Test extension is loaded
+09:52:06 [INFO]: Logged as Pylice
+09:52:54 [INFO]: Setup extension is loaded
+09:52:54 [INFO]: Test extension is loaded
+09:52:56 [INFO]: Logged as Pylice
+09:52:57 [INFO]: Synced commands: 2
+09:55:15 [INFO]: Setup extension is loaded
+09:55:15 [INFO]: Test extension is loaded
+09:55:18 [INFO]: Logged as Pylice
+09:55:18 [INFO]: Synced commands: 2
+09:55:43 [INFO]: Setup extension is loaded
+09:55:43 [INFO]: Test extension is loaded
+09:55:45 [INFO]: Logged as Pylice
+09:56:18 [INFO]: Synced commands: 2
+09:56:32 [INFO]: Setup extension is loaded
+09:56:32 [INFO]: Test extension is loaded
+09:56:34 [INFO]: Logged as Pylice
+09:56:34 [INFO]: Synced commands: 2
+09:57:02 [INFO]: Setup extension is loaded
+09:57:02 [INFO]: Test extension is loaded
+09:57:04 [INFO]: Logged as Pylice
+09:57:05 [INFO]: Synced commands: 2
+09:57:57 [INFO]: Setup extension is loaded
+09:57:57 [INFO]: Test extension is loaded
+09:57:59 [INFO]: Logged as Pylice
+09:58:00 [INFO]: Synced commands: 2
+09:58:24 [INFO]: Setup extension is loaded
+09:58:24 [INFO]: Test extension is loaded
+09:58:27 [INFO]: Logged as Pylice
+09:59:02 [INFO]: Setup extension is loaded
+09:59:02 [INFO]: Test extension is loaded
+09:59:04 [INFO]: Logged as Pylice
+09:59:04 [INFO]: Synced commands: 2
+10:01:25 [INFO]: Setup extension is loaded
+10:01:25 [INFO]: Test extension is loaded
+10:01:27 [INFO]: Logged as Pylice
+10:01:28 [INFO]: Synced commands: 2
