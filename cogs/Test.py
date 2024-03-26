@@ -33,7 +33,7 @@ class Test(commands.Cog):
                 sql = "SELECT * FROM `servers`"
                 cursor.execute(sql)
                 result = cursor.fetchone()
-                await interaction.response.send_message(result['name'])
+                await interaction.response.send_message(result)
     
     
 async def setup(bot:commands.Bot) -> None:
