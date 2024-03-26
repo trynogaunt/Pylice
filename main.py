@@ -6,7 +6,6 @@ import os
 import datetime
 from app.Logger import Logger as Logger
 
-
 class Bot(commands.Bot):
     def __init__(self , logger)-> None:
         super().__init__(command_prefix="/" , intents=discord.Intents.all())
@@ -36,11 +35,11 @@ class Bot(commands.Bot):
 logger = Logger()
 bot = Bot(logger)
 
-with open('default.toml','r', encoding="utf8") as f:
+with open('app/default.toml','r', encoding="utf8") as f:
     config = toml.load(f)
                      
 
 
 if __name__ == "__main__":
 
-    bot.run(config['connect']['BotToken'])
+    bot.run(config['connect']['token'])
