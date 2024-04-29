@@ -5,15 +5,18 @@ from discord import app_commands
 from app.classes.Database import Connexion as cxn
 import pymysql
 import toml
+import datetime
 
 class TicketModal(discord.ui.Modal, title='Support Ticket'):
     problem = discord.ui.TextInput(label="Describe your problem", style=discord.TextStyle.long , placeholder="My problem is...", required=True)
 
     async def on_submit(self, interaction: discord.Interaction):
         thread = await interaction.channel.create_thread(name=f"{interaction.user.name}'s ticket" , type=discord.ChannelType.private_thread)
+        date = datetime.datetime.now()
+        date = date.strftime("%y-%m-%d")
         await thread.add_user(interaction.user)
-        await thread.send(f"{self.problem.value}")
-        await interaction.response.send_message("Ca roule")
+        await thread.send(f"From: **{interaction.user.name}**\n\nDate: **{date}**\n\nIssue:\n```{self.problem.value}```")
+        await interaction.response.send_message(f"Ton ticket a été créé ici: {thread.mention}", ephemeral=True)
                 
 class SupportPanelView(discord.ui.View):
     def __init__(self):
@@ -55,7 +58,7 @@ class Support(commands.Cog):
                             sql = "INSERT INTO support VALUES (%s, %s)"
                             cursor.execute(sql , (interaction.guild.id , panel.id))
                             connection.commit()
-                            panel.pin()
+                            await panel.pin()
                             await interaction.followup.send("Votre panel support a été créé")
                         else:
                             await interaction.response.send_message("Votre panel existe déjà" , ephemeral=True)

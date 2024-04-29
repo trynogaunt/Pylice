@@ -12,11 +12,20 @@ class Administration(commands.Cog):
         super().__init__()
 
     @app_commands.command(description="Purge all unpinned message")
-    async def purge(self, interaction : discord.Interaction):
+    @app_commands.checks.has_permissions(manage_messages = True)
+    async def purge(self, interaction : discord.Interaction , limit : int = 100):
+        await interaction.response.defer()
         def not_pinned(m):
             return not m.pinned
-        purged = await interaction.channel.purge(limit=100, check=not_pinned)
-        await interaction.channel.send(f"{len(purged)} messages supprimés (Ce message s'auto-détruira 10 secondes après son envoi)", delete_after=10)
+        purged = await interaction.channel.purge(limit=limit, check=not_pinned)
+        await interaction.followup.send(f"{len(purged)} messages supprimés (Ce message s'auto-détruira 10 secondes après son envoi)" , ephemeral=True)
+    
+    @app_commands.command(description="Purge all messages pinned included")
+    @app_commands.checks.has_permissions(manage_messages = True)
+    async def purge_all(self, interaction : discord.Interaction , limit : int =100):
+        await interaction.response.defer()
+        purged = await interaction.channel.purge(limit=limit)
+        await interaction.followup.send(f"{len(purged)} messages supprimés (Ce message s'auto-détruira 10 secondes après son envoi)", ephemeral=True)
 
 
 async def setup(bot:commands.Bot) -> None:
