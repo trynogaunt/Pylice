@@ -13,16 +13,16 @@ class TicketModal(discord.ui.Modal, title='Support Ticket'):
         thread = await interaction.channel.create_thread(name=f"{interaction.user.name}'s ticket" , type=discord.ChannelType.private_thread)
         await thread.add_user(interaction.user)
         await thread.send(self.problem.value)
-        await interaction.response.send_message("Ca roule")        
+        await interaction.response.send_message("Ca roule")
+                
 class SupportPanelView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
     
-    @discord.ui.button(label='Open support ticket', style=discord.ButtonStyle.green)
+    @discord.ui.button(label='Open support ticket', style=discord.ButtonStyle.green, custom_id='persistent_support_button:green')
     async def open_ticket(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.send_modal(TicketModal())
     
-    @discord.ui.
 
 
 class Support(commands.Cog):

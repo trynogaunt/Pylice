@@ -5,6 +5,7 @@ import toml
 import os
 import datetime
 from app.classes.Logger import Logger as Logger
+from cogs.Support import SupportPanelView
 
 class Bot(commands.Bot):
     def __init__(self , logger)-> None:
@@ -28,6 +29,7 @@ class Bot(commands.Bot):
                 logger.log(state="info" , message=  f'{cog} extension is loaded')
             except Exception as e:
                 logger.log(state="error" , message=  f"{cog} extension can't be loaded -> {e}")
+        self.add_view(SupportPanelView(), message_id=1234368166604574801)
         return await super().setup_hook()
 
 
