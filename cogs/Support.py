@@ -47,6 +47,7 @@ class Support(commands.Cog):
                 if result == None:
                     await interaction.response.send_message("Votre serveur n'est pas configuré , merci d'utiliser la commande /setup pour commencer la configuration")
                 else:
+                    channel = interaction.guild.get_channel(result['support_channel_id'])
                     if result['command_channel_id'] == interaction.channel.id:
                         view = SupportPanelView()
                         sql = "SELECT panel_id FROM support"
@@ -54,7 +55,8 @@ class Support(commands.Cog):
                         result  = cursor.fetchone()
                         if result == None:
                             await interaction.response.defer()
-                            panel = await interaction.channel.send(view=view)
+                            
+                            panel = await channel.send(view=view)
                             sql = "INSERT INTO support VALUES (%s, %s)"
                             cursor.execute(sql , (interaction.guild.id , panel.id))
                             connection.commit()
@@ -62,6 +64,8 @@ class Support(commands.Cog):
                             await interaction.followup.send("Votre panel support a été créé")
                         else:
                             await interaction.response.send_message("Votre panel existe déjà" , ephemeral=True)
+                    else:
+                        await interaction.response.send_message("Ceci n'est pas un channel de commande" , ephemeral=True)
 
         
 
