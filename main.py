@@ -4,7 +4,7 @@ from discord.ext import commands
 import toml
 import os
 import datetime
-from app.Logger import Logger as Logger
+from app.classes.Logger import Logger as Logger
 
 class Bot(commands.Bot):
     def __init__(self , logger)-> None:
