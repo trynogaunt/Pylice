@@ -12,7 +12,7 @@ class TicketModal(discord.ui.Modal, title='Support Ticket'):
     async def on_submit(self, interaction: discord.Interaction):
         thread = await interaction.channel.create_thread(name=f"{interaction.user.name}'s ticket" , type=discord.ChannelType.private_thread)
         await thread.add_user(interaction.user)
-        await thread.send(self.problem.value)
+        await thread.send(f"{self.problem.value}")
         await interaction.response.send_message("Ca roule")
                 
 class SupportPanelView(discord.ui.View):
@@ -42,11 +42,27 @@ class Support(commands.Cog):
                 result = cursor.fetchone()
                 
                 if result == None:
-                    msg = "Votre serveur n'est pas configuré , merci d'utiliser la commande /setup pour commencer la configuration"
+                    await interaction.response.send_message("Votre serveur n'est pas configuré , merci d'utiliser la commande /setup pour commencer la configuration")
                 else:
                     if result['command_channel_id'] == interaction.channel.id:
                         view = SupportPanelView()
-                        await interaction.channel.send(view=view)
+                        sql = "SELECT panel_id FROM support"
+                        cursor.execute(sql)
+                        result  = cursor.fetchone()
+                        if result == None:
+                            await interaction.response.defer()
+                            panel = await interaction.channel.send(view=view)
+                            sql = "INSERT INTO support VALUES (%s, %s)"
+                            cursor.execute(sql , (interaction.guild.id , panel.id))
+                            connection.commit()
+                            panel.pin()
+                            await interaction.followup.send("Votre panel support a été créé")
+                        else:
+                            await interaction.response.send_message("Votre panel existe déjà" , ephemeral=True)
+
+        
+
+
                 
         
 

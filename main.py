@@ -6,6 +6,7 @@ import os
 import datetime
 from app.classes.Logger import Logger as Logger
 from cogs.Support import SupportPanelView
+import pymysql
 
 class Bot(commands.Bot):
     def __init__(self , logger)-> None:
@@ -29,7 +30,17 @@ class Bot(commands.Bot):
                 logger.log(state="info" , message=  f'{cog} extension is loaded')
             except Exception as e:
                 logger.log(state="error" , message=  f"{cog} extension can't be loaded -> {e}")
-        self.add_view(SupportPanelView(), message_id=1234368166604574801)
+        with open('app/default.toml','r', encoding="utf8") as f:
+            config = toml.load(f)
+            connection = pymysql.connect(host=config['database']['adress'],user=config['database']['user'],password=config['database']['password'],database=config['database']['name'],cursorclass=pymysql.cursors.DictCursor)
+            with connection:
+                with connection.cursor() as cursor:
+                    sql = "SELECT panel_id FROM support"
+                    cursor.execute(sql)
+                    result = cursor.fetchall()
+                    if result != None:
+                        for panel in result:
+                            self.add_view(SupportPanelView(), message_id=panel["panel_id"])
         return await super().setup_hook()
 
 
