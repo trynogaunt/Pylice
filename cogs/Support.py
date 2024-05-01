@@ -1,22 +1,61 @@
+from typing import List
 import discord
 from discord.ext import commands
 from discord import ui
 from discord import app_commands
+from discord.utils import MISSING
 from app.classes.Database import Connexion as cxn
 import pymysql
 import toml
 import datetime
 
 class TicketModal(discord.ui.Modal, title='Support Ticket'):
+    modal_title = discord.ui.TextInput(label="Title", style=discord.TextStyle.short, placeholder="Ticket Title" ,required=True)
     problem = discord.ui.TextInput(label="Describe your problem", style=discord.TextStyle.long , placeholder="My problem is...", required=True)
 
     async def on_submit(self, interaction: discord.Interaction):
-        thread = await interaction.channel.create_thread(name=f"{interaction.user.name}'s ticket" , type=discord.ChannelType.private_thread)
+        title = f"⏲️ {self.modal_title.value}"
+        thread = await interaction.channel.create_thread(name=title, type=discord.ChannelType.private_thread)
         date = datetime.datetime.now()
-        date = date.strftime("%y-%m-%d")
+        date = date.strftime("%Y-%m-%d")
         await thread.add_user(interaction.user)
-        await thread.send(f"From: **{interaction.user.name}**\n\nDate: **{date}**\n\nIssue:\n```{self.problem.value}```")
+        await thread.send(f"From: **{interaction.user.name}**\n\nDate: **{date}**\n\nIssue:\n```{self.problem.value}```", view=TicketView())
         await interaction.response.send_message(f"Ton ticket a été créé ici: {thread.mention}", ephemeral=True)
+    
+class TicketDropdown(discord.ui.Select):
+    def __init__(self) -> None:
+        options = [
+            discord.SelectOption(label='Waiting', description='Tikcet en cours de résolution', emoji='⏲️'),
+            discord.SelectOption(label='Resolved', description='Ticket résolu et fermé', emoji='✅'),
+            discord.SelectOption(label='Opened', description='Ticket en attente du staff', emoji='❓')
+        ]
+        super().__init__(custom_id="ticket_dropdown", options=options)
+    
+
+    async def callback(self, interaction: discord.Interaction):
+        closed = False
+        match self.values[0]:
+            case "Waiting":
+                msg = "Ticket mis en cours de résolution"
+                eph = True
+                title = f"⏲️ {interaction.channel.name[2:]}"
+            case "Resolved":
+                msg = "Ticket fermé"
+                eph = False
+                title = f"✅ {interaction.channel.name[2:]}"
+                closed = True
+            case "Opened":
+                msg = "Ticket en attente de staff"
+                eph = True
+                title = f"❓ {interaction.channel.name[2:]}"
+        await interaction.response.send_message(msg , ephemeral=eph)
+        await interaction.channel.edit(name=title, archived=closed)
+        
+
+class TicketView(discord.ui.View):
+    def __init__(self, *, timeout: float | None = 180):
+        super().__init__(timeout=timeout)
+        self.add_item(TicketDropdown())
                 
 class SupportPanelView(discord.ui.View):
     def __init__(self):
