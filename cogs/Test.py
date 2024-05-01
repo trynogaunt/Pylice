@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord import ui
 from discord import app_commands
-from app.Database import Connexion as cxn
+from app.classes.Database import Connexion as cxn
 import pymysql
 import toml
 
