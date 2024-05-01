@@ -89,7 +89,7 @@ class Support(commands.Cog):
         self.bot = bot
 
     @app_commands.command()
-    async def support_panel(self , interaction : discord.Interaction):
+    async def support_panel(self , interaction : discord.Interaction , message : str):
         with open('app/default.toml','r', encoding="utf8") as f:
              config = toml.load(f)
              connection = pymysql.connect(host=config['database']['adress'],user=config['database']['user'],password=config['database']['password'],database=config['database']['name'],cursorclass=pymysql.cursors.DictCursor)
@@ -110,8 +110,11 @@ class Support(commands.Cog):
                         result  = cursor.fetchone()
                         if result == None:
                             await interaction.response.defer()
-                            
-                            panel = await channel.send(view=view)
+                            embed = discord.Embed()
+                            embed.add_field(name="Ticket panel", value=message)
+                            embed.set_footer(text=self.bot.user.name , icon_url=self.bot.user.avatar.url)
+                            embed.colour = discord.Colour.brand_green()
+                            panel = await channel.send(embed=embed, view=view)
                             sql = "INSERT INTO support VALUES (%s, %s)"
                             cursor.execute(sql , (interaction.guild.id , panel.id))
                             connection.commit()
@@ -130,4 +133,4 @@ class Support(commands.Cog):
 
 
 async def setup(bot:commands.Bot) -> None:
-    await bot.add_cog(Support(bot), guild=discord.Object(id=1218400838196662403))
+    await bot.add_cog(Support(bot))
