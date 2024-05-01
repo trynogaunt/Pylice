@@ -3,6 +3,7 @@
 
 Pylice is a administration bot for your discord server.
 
-- Support Ticket 
+Fonctionnality available:
+  - Support Ticket 
 
 Developed with discord.py
