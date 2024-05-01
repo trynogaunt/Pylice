@@ -5,7 +5,7 @@ import toml
 import os
 import datetime
 from app.classes.Logger import Logger as Logger
-from cogs.Support import SupportPanelView
+from cogs.Support import SupportPanelView , TicketView
 import pymysql
 
 class Bot(commands.Bot):
@@ -41,6 +41,13 @@ class Bot(commands.Bot):
                     if result != None:
                         for panel in result:
                             self.add_view(SupportPanelView(), message_id=panel["panel_id"])
+                    sql = "SELECT ticket_id , is_closed FROM ticket"
+                    cursor.execute(sql)
+                    result = cursor.fetchall()
+                    if result != None:
+                        for ticket in result:
+                            if ticket['is_closed'] == False:
+                                self.add_view( TicketView(), message_id=ticket["ticket_id"])
         return await super().setup_hook()
 
 

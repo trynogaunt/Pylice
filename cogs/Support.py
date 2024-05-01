@@ -19,7 +19,15 @@ class TicketModal(discord.ui.Modal, title='Support Ticket'):
         date = datetime.datetime.now()
         date = date.strftime("%Y-%m-%d")
         await thread.add_user(interaction.user)
-        await thread.send(f"From: **{interaction.user.name}**\n\nDate: **{date}**\n\nIssue:\n```{self.problem.value}```", view=TicketView())
+        ticket = await thread.send(f"From: **{interaction.user.name}**\n\nDate: **{date}**\n\nIssue:\n```{self.problem.value}```", view=TicketView())
+        with open('app/default.toml','r', encoding="utf8") as f:
+             config = toml.load(f)
+             connection = pymysql.connect(host=config['database']['adress'],user=config['database']['user'],password=config['database']['password'],database=config['database']['name'],cursorclass=pymysql.cursors.DictCursor)
+        with connection:
+            with connection.cursor() as cursor:
+                sql = "INSERT INTO ticket VALUES (%s, %s , %s)"
+                cursor.execute(sql , (interaction.guild.id , ticket.id , False))
+                connection.commit()
         await interaction.response.send_message(f"Ton ticket a été créé ici: {thread.mention}", ephemeral=True)
     
 class TicketDropdown(discord.ui.Select):
@@ -44,6 +52,14 @@ class TicketDropdown(discord.ui.Select):
                 eph = False
                 title = f"✅ {interaction.channel.name[2:]}"
                 closed = True
+                with open('app/default.toml','r', encoding="utf8") as f:
+                    config = toml.load(f)
+                    connection = pymysql.connect(host=config['database']['adress'],user=config['database']['user'],password=config['database']['password'],database=config['database']['name'],cursorclass=pymysql.cursors.DictCursor)
+                    with connection:
+                        with connection.cursor() as cursor:
+                            sql = "UPDATE ticket SET is_closed = %s WHERE ticket_id = %s"
+                            cursor.execute(sql , (True , interaction.message.id))
+                            connection.commit()
             case "Opened":
                 msg = "Ticket en attente de staff"
                 eph = True
@@ -54,7 +70,7 @@ class TicketDropdown(discord.ui.Select):
 
 class TicketView(discord.ui.View):
     def __init__(self, *, timeout: float | None = 180):
-        super().__init__(timeout=timeout)
+        super().__init__(timeout=None)
         self.add_item(TicketDropdown())
                 
 class SupportPanelView(discord.ui.View):
