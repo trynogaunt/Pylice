@@ -45,4 +45,4 @@ class Administration(commands.Cog):
 
 
 async def setup(bot:commands.Bot) -> None:
-    await bot.add_cog(Administration(bot) , guild=discord.Object(id=1218400838196662403))
+    await bot.add_cog(Administration(bot))
