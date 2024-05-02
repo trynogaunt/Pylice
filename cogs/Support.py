@@ -34,9 +34,9 @@ class TicketModal(discord.ui.Modal, title='Support Ticket'):
 class TicketDropdown(discord.ui.Select):
     def __init__(self) -> None:
         options = [
-            discord.SelectOption(label='Waiting', description='Ticket en cours de résolution', emoji='⏲️'),
+            discord.SelectOption(label='Waiting', description='Ticket en attente du staff', emoji='⏲️'),
             discord.SelectOption(label='Resolved', description='Ticket résolu et fermé', emoji='✅'),
-            discord.SelectOption(label='Opened', description='Ticket en attente du staff', emoji='❓')
+            discord.SelectOption(label='Opened', description='Ticket en cours de résolution', emoji='❓')
         ]
         super().__init__(custom_id="ticket_dropdown", options=options)
     
