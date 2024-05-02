@@ -45,7 +45,7 @@ class TicketDropdown(discord.ui.Select):
         closed = False
         match self.values[0]:
             case "Waiting":
-                msg = "Ticket mis en cours de résolution"
+                msg = "Ticket en attente"
                 eph = True
                 title = f"⏲️ {interaction.channel.name[2:]}"
             case "Resolved":
@@ -62,7 +62,7 @@ class TicketDropdown(discord.ui.Select):
                             cursor.execute(sql , (True , interaction.message.id))
                             connection.commit()
             case "Opened":
-                msg = "Ticket en attente de staff"
+                msg = "Ticket en cours de résolution"
                 eph = True
                 title = f"❓ {interaction.channel.name[2:]}"
         await interaction.response.send_message(msg , ephemeral=eph)
