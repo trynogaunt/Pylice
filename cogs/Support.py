@@ -66,8 +66,7 @@ class TicketDropdown(discord.ui.Select):
                 eph = True
                 title = f"❓ {interaction.channel.name[2:]}"
         await interaction.response.send_message(msg , ephemeral=eph)
-        if closed:
-            await interaction.channel.edit(name=title, archived=closed)
+        await interaction.channel.edit(name=title, archived=closed)
         
 
 class TicketView(discord.ui.View):
