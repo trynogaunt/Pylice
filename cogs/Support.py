@@ -5,10 +5,12 @@ from discord import ui
 from discord import app_commands
 from discord.utils import MISSING
 from app.classes.Database import Connexion as cxn
+from app.classes.Language import Language
 import pymysql
 import toml
 import datetime
 import asyncio
+from app.classes.Language import Language
 
 class TicketModal(discord.ui.Modal, title='Support Ticket'):
     modal_title = discord.ui.TextInput(label="Title", style=discord.TextStyle.short, placeholder="Ticket Title" ,required=True)
@@ -42,7 +44,18 @@ class TicketDropdown(discord.ui.Select):
     
 
     async def callback(self, interaction: discord.Interaction):
+        with open('app/default.toml','r', encoding="utf8") as f:
+            config= toml.load(f)
+            connection = pymysql.connect(host=config['database']['adress'],user=config['database']['user'],password=config['database']['password'],database=config['database']['name'],cursorclass=pymysql.cursors.DictCursor)
+            with connection:
+                with connection.cursor() as cursor:
+                    sql = "SELECT server_language FROM `servers` WHERE id = %s"
+                    cursor.execute(sql , (interaction.guild.id))
+                    result = cursor.fetchone()
         closed = False
+        with open('app/language.toml','r', encoding="utf8") as f:
+             config = toml.load(f)
+             ticket_waiting = config[result['server_language']]['ticket_waiting']
         match self.values[0]:
             case "Waiting":
                 msg = "Ticket mis en cours de résolution"
@@ -89,6 +102,7 @@ class Support(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
         super().__init__()
         self.bot = bot
+        self.language = Language()
 
     @app_commands.command()
     async def support_panel(self , interaction : discord.Interaction , message : str):
@@ -128,8 +142,10 @@ class Support(commands.Cog):
                             await interaction.response.send_message("Votre panel existe déjà" , ephemeral=True)
                     else:
                         await interaction.response.send_message("Ceci n'est pas un channel de commande" , ephemeral=True)
-
-        
+    @app_commands.command(description="Printe name")
+    async def test(self , interaction : discord.Interaction):
+        Language().interface("FR" , __name__)
+        await interaction.response.send_message("ok" , ephemeral=True)
 
 
                 
@@ -137,4 +153,4 @@ class Support(commands.Cog):
 
 
 async def setup(bot:commands.Bot) -> None:
-    await bot.add_cog(Support(bot))
+    await bot.add_cog(Support(bot) , guild=discord.Object(id=1218400838196662403))

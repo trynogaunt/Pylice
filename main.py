@@ -20,7 +20,7 @@ class Bot(commands.Bot):
     async def on_ready(self)-> None:
         await self.change_presence(status=discord.Status.online , activity=discord.Activity(name = "The Wonderland" , type = discord.ActivityType.watching , state ="Madness incoming..."))
         logger.log(state = "info" , message= f"Logged as {self.user.name}")
-        synced = await self.tree.sync()
+        synced = await self.tree.sync(guild=discord.Object(id=1218400838196662403))
         logger.log(state="info" , message=  f'Synced commands: {len(synced)}')
     
     async def setup_hook(self) -> None:

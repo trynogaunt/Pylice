@@ -8,6 +8,7 @@ import toml
 import pymysql
 import datetime
 from app.classes import Logger
+from app.classes.Language import Language
 
 class Setup(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
@@ -24,21 +25,18 @@ class Setup(commands.Cog):
                 sql = "SELECT * FROM `servers` WHERE id = %s"
                 cursor.execute(sql , (interaction.guild.id))
                 result = cursor.fetchone()
-                with open('app/language.toml','r', encoding="utf8") as l:
-                    language_data = toml.load(l)
                 if result != None:
-                    msg = language_data[language]['server_already_setup']
+                    msg = "Server"
                 else:
-                    msg = language[language]['server_registered'].format(gname = interaction.guild.name)
+                    msg = language[language][self.name]['registered'].format(gname = interaction.guild.name)
                     date = datetime.datetime.now()
                     date = date.strftime("%y-%m-%d %H:%M:%S")
                     sql = "INSERT INTO pylice.servers (id, name, owner , support_channel_id , command_channel_id, welcome_channel_id , server_language) VALUES (%s , %s , %s , %s , %s , %s , %s)"
-                    print(sql)
                     cursor.execute(sql, (interaction.guild.id , str(interaction.guild.name) , interaction.guild.owner_id , support_channel.id , command_channel.id , welcome_channel.id , language))
-            connection.commit()
+                    connection.commit()
                     
         await interaction.response.send_message(msg , ephemeral=True)
         
     
 async def setup(bot:commands.Bot) -> None:
-    await bot.add_cog(Setup(bot))
+    await bot.add_cog(Setup(bot), guild=discord.Object(id=1218400838196662403))
