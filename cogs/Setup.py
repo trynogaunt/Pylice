@@ -15,7 +15,7 @@ class Setup(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="setup" , description="First step to use the bot")
-    async def setup(self, interaction : discord.Interaction , command_channel : discord.TextChannel , support_channel : discord.TextChannel , welcome_channel : discord.TextChannel) :
+    async def setup(self, interaction : discord.Interaction , command_channel : discord.TextChannel , support_channel : discord.TextChannel , welcome_channel : discord.TextChannel , language : str) :
         with open('app/default.toml','r', encoding="utf8") as f:
              config = toml.load(f)
              connection = pymysql.connect(host=config['database']['adress'],user=config['database']['user'],password=config['database']['password'],database=config['database']['name'],cursorclass=pymysql.cursors.DictCursor)
@@ -25,16 +25,16 @@ class Setup(commands.Cog):
                 cursor.execute(sql , (interaction.guild.id))
                 result = cursor.fetchone()
                 with open('app/language.toml','r', encoding="utf8") as l:
-                    language = toml.load(l)
+                    language_data = toml.load(l)
                 if result != None:
-                    msg = language['FR']['already_setup']
+                    msg = language_data[language]['server_already_setup']
                 else:
-                    msg = language['FR']['server_registered'].format(gname = interaction.guild.name)
+                    msg = language[language]['server_registered'].format(gname = interaction.guild.name)
                     date = datetime.datetime.now()
                     date = date.strftime("%y-%m-%d %H:%M:%S")
-                    sql = "INSERT INTO pylice.servers (id, name, owner , support_channel_id , command_channel_id, welcome_channel_id) VALUES (%s , %s , %s , %s , %s , %s)"
+                    sql = "INSERT INTO pylice.servers (id, name, owner , support_channel_id , command_channel_id, welcome_channel_id , server_language) VALUES (%s , %s , %s , %s , %s , %s , %s)"
                     print(sql)
-                    cursor.execute(sql, (interaction.guild.id , str(interaction.guild.name) , interaction.guild.owner_id , support_channel.id , command_channel.id , welcome_channel.id))
+                    cursor.execute(sql, (interaction.guild.id , str(interaction.guild.name) , interaction.guild.owner_id , support_channel.id , command_channel.id , welcome_channel.id , language))
             connection.commit()
                     
         await interaction.response.send_message(msg , ephemeral=True)
