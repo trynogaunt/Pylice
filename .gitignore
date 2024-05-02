@@ -1,2 +1,5 @@
 *.txt
 *.toml
+
+cogs/__pycache__/Support.cpython-310.pyc
+cogs/__pycache__/Setup.cpython-310.pyc
