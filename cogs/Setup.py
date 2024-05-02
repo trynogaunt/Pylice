@@ -24,10 +24,12 @@ class Setup(commands.Cog):
                 sql = "SELECT * FROM `servers` WHERE id = %s"
                 cursor.execute(sql , (interaction.guild.id))
                 result = cursor.fetchone()
+                with open('app/language.toml','r', encoding="utf8") as l:
+                    language = toml.load(l)
                 if result != None:
-                    msg = "Ce serveur est déjà enregistré"
+                    msg = language['FR']['already_setup']
                 else:
-                    msg = f"Le serveur {interaction.guild.name} est configuré"
+                    msg = language['FR']['server_registered'].format(gname = interaction.guild.name)
                     date = datetime.datetime.now()
                     date = date.strftime("%y-%m-%d %H:%M:%S")
                     sql = "INSERT INTO pylice.servers (id, name, owner , support_channel_id , command_channel_id, welcome_channel_id) VALUES (%s , %s , %s , %s , %s , %s)"
