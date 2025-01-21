@@ -5,13 +5,14 @@ from discord import app_commands
 import toml
 
 MY_GUILD = discord.Object(id=1218400838196662403)
+
 class Pylice(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix='/', intents=discord.Intents.default())
         print(f"{self.__class__.__name__} is running...")
         
     
-    async def setup_hook(self):
+    async def setup_hook(self):        
         for cog in os.listdir("app/cogs"):
             if cog.endswith(".py") and not cog.startswith("__"):
                 try:
@@ -20,9 +21,8 @@ class Pylice(commands.Bot):
                 except Exception as e:
                     print(f"Failed to load {cog}.")
                     print(e)
-
-        
         await self.tree.sync(guild=MY_GUILD)
+
         print(f"Command tree is ready.")
 
     async def on_ready(self):
@@ -30,7 +30,8 @@ class Pylice(commands.Bot):
             print(f"Command: {command.name}")
         print(f"{self.user} is ready.")
 
-client = Pylice()  
+client = Pylice()
+
 if __name__ == "__main__":
     with open("app/core.toml") as f:
         config = toml.load(f)

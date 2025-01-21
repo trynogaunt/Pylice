@@ -7,7 +7,7 @@ from discord import app_commands
 sys.path.append('C:/Users/tryno/Desktop/Pylice/app/')
 
 from views.voiceSetupView import VoiceSetupView
-
+MY_GUILD = discord.Object(id=1218400838196662403)
 class Voice(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -29,4 +29,4 @@ class Voice(commands.Cog):
             
 
 async def setup(client):
-    await client.add_cog(Voice(client))
+    await client.add_cog(Voice(client), guilds = [MY_GUILD])
